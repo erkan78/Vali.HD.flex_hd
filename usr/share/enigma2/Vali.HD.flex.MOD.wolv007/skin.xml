@@ -836,6 +836,8 @@
     <ePixmap alphatest="on" pixmap="Vali.HD.flex.MOD.wolv007/bg.png" position="0,0" size="1280,720" zPosition="-1" />
     <widget backgroundColor="secondBG" font="Regular;24" position="70,35" render="Label" size="850,50" source="Title" transparent="1" valign="center" zPosition="1" />
     <widget backgroundColor="secondBG" font="Regular;20" halign="right" position="940,35" render="Label" size="270,50" source="global.CurrentTime" transparent="1" valign="center" zPosition="1">
+
+
       <convert type="ClockToText">Format:%a %d. %b   %H:%M</convert>
     </widget>
     <ePixmap alphatest="blend" pixmap="Vali.HD.flex.MOD.wolv007/red.png" position="100,643" size="30,30" />
@@ -2565,7 +2567,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey)/2))
     <widget alphatest="on" name="wizard" pixmap="skin_default/wizard.png" position="210,110" size="110,174" transparent="1" zPosition="10" />
     <ePixmap alphatest="blend" pixmap="Vali.HD.flex.MOD.wolv007/red.png" position="100,643" size="30,30" />
     <widget font="Regular;18" name="languagetext" position="145,645" size="500,26" transparent="1" />
-    <widget alphatest="on" name="portpic" pixmap="%s" position="50,300" size="150,150" transparent="1" zPosition="10" />
+    <widget alphatest="on" name="portpic" position="50,300" size="150,150" transparent="1" zPosition="10" />
     <widget alphatest="on" name="rc" pixmaps="skin_default/rc.png,skin_default/rcold.png" position="885,105" size="154,500" transparent="1" zPosition="10" />
     <widget alphatest="on" name="arrowdown" pixmap="skin_default/arrowdown.png" position="0,0" size="37,70" transparent="1" zPosition="11" />
     <widget alphatest="on" name="arrowdown2" pixmap="skin_default/arrowdown.png" position="0,0" size="37,70" transparent="1" zPosition="11" />
