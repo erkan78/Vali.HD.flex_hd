@@ -116,96 +116,96 @@
     <ePixmap alphatest="on" pixmap="Vali.HD.flex.MOD.wolv007/mute.png" position="0,0" size="45,45" zPosition="0" />
   </screen>
   <!--InfoBars ##### -->
-  <screen backgroundColor="transparent" flags="wfNoBorder" name="InfoBar" position="center,500" size="1280,280" title="InfoBar">
-    <ePixmap alphatest="off" pixmap="Vali.HD.flex.MOD.wolv007/infobar.png" position="center,0" size="1280,280" zPosition="-1" />
-    <widget alphatest="blend" position="1125,117" render="Picon" size="100,60" source="session.CurrentService" transparent="1" zPosition="1">
-      <convert type="ServiceName">Reference</convert>
-    </widget>
-    <widget font="Regular;32" foregroundColor="secondFG" backgroundColor="backgroundNT" halign="center" valign="bottom" render="Wolv007ChNumber" source="session.CurrentService" position="99,152" size="80,50" transparent="1" zPosition="0" />
-    <widget font="Regular; 24" foregroundColor="foreground" valign="center" halign="center" position="40,97" render="Label" size="220,55" source="session.CurrentService" transparent="1" zPosition="1" backgroundColor="backgroundNT">
-      <convert type="ServiceName">Name</convert>
-    </widget>
-    <widget font="Regular; 32" foregroundColor="foreground" position="70,37" render="Label" size="100,50" source="global.CurrentTime" transparent="1" valign="center" zPosition="1" halign="center" backgroundColor="backgroundNT">
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <widget font="Regular; 18" foregroundColor="foreground" position="175,37" render="Label" size="275,50" source="global.CurrentTime" transparent="1" zPosition="1" halign="left" valign="center" backgroundColor="backgroundNT">
-      <convert type="ClockToText">Format:%A %d. %B %Y</convert>
-    </widget>
-    <widget font="Regular; 28" foregroundColor="foreground" position="300,105" render="Label" size="80,30" source="session.Event_Now" transparent="1" zPosition="1" halign="center" backgroundColor="backgroundNT">
-      <convert type="EventTime">StartTime</convert>
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <widget font="Regular; 16" foregroundColor="secondFG" halign="right" position="265,140" render="Label" size="70,22" source="session.Event_Now" transparent="1" zPosition="1" backgroundColor="backgroundNT">
-      <convert type="EventTime">Remaining</convert>
-      <convert type="Wolv007ProgressToText">InMinutes</convert>
-    </widget>
-    <eLabel text="/" position="335,140" size="10,22" font="Regular; 16" halign="center" backgroundColor="backgroundNT" foregroundColor="secondFG" transparent="1" />
-    <widget font="Regular; 16" foregroundColor="secondFG" position="345,140" render="Label" size="70,22" source="session.Event_Now" transparent="1" zPosition="1" halign="left" backgroundColor="backgroundNT">
-      <convert type="EventTime">Duration</convert>
-      <convert type="ClockToText">InMinutes</convert>
-    </widget>
-    <widget font="Regular; 28" foregroundColor="foreground" noWrap="1" position="415,105" halign="left" render="Label" size="700,35" source="session.Event_Now" transparent="1" zPosition="1" backgroundColor="backgroundNT">
-      <convert type="EventName">Name</convert>
-    </widget>
-    <widget font="Regular; 20" position="265,168" render="Label" size="70,30" source="session.Event_Next" transparent="1" zPosition="1" halign="center" backgroundColor="backgroundNT">
-      <convert type="EventTime">StartTime</convert>
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <eLabel text="-" position="335,168" size="10,30" font="Regular; 18" halign="center" backgroundColor="backgroundNT" transparent="1" />
-    <widget font="Regular; 20" position="345,168" render="Label" size="70,30" source="session.Event_Next" transparent="1" zPosition="1" halign="center" backgroundColor="backgroundNT">
-      <convert type="EventTime">EndTime</convert>
-      <convert type="ClockToText">Default</convert>
-    </widget>
-    <widget font="Regular; 20" noWrap="1" position="415,168" halign="left" render="Label" size="500,30" source="session.Event_Next" transparent="1" zPosition="1" backgroundColor="backgroundNT">
-      <convert type="EventName">Name</convert>
-    </widget>
-    <eLabel text="(" position="915,168" size="10,30" font="Regular; 18" halign="center" backgroundColor="backgroundNT" transparent="1" />
-    <widget font="Regular; 20" halign="center" position="925,168" render="Label" size="80,30" source="session.Event_Next" transparent="1" zPosition="1" backgroundColor="backgroundNT">
-      <convert type="EventTime">Duration</convert>
-      <convert type="ClockToText">InMinutes</convert>
-    </widget>
-    <eLabel text=")" position="1005,168" size="10,30" font="Regular; 18" halign="center" backgroundColor="backgroundNT" transparent="1" />
-    <widget borderColor="darkgrey" borderWidth="2" pixmap="Vali.HD.flex.MOD.wolv007/p-bar.png" position="416,147" render="Progress" size="500,10" source="session.Event_Now" transparent="0" zPosition="2">
-      <convert type="EventTime">Progress</convert>
-    </widget>
-    <widget alphatest="on" pixmap="Vali.HD.flex.MOD.wolv007/ico_dolby_on.png" position="920,50" render="Pixmap" size="60,24" source="session.CurrentService" zPosition="2">
-      <convert type="ServiceInfo">IsMultichannel</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <ePixmap alphatest="on" pixmap="Vali.HD.flex.MOD.wolv007/ico_format_off.png" position="1040,52" size="40,21" zPosition="1" />
-    <widget alphatest="on" pixmap="Vali.HD.flex.MOD.wolv007/ico_format_on.png" position="1040,52" render="Pixmap" size="40,21" source="session.CurrentService" zPosition="2">
-      <convert type="ServiceInfo">IsWidescreen</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget alphatest="on" pixmap="Vali.HD.flex.MOD.wolv007/ico_hd_on.png" position="1040,52" render="Pixmap" size="40,21" source="session.CurrentService" zPosition="4">
-      <convert type="ServiceInfo">VideoWidth</convert>
-      <convert type="ValueRange">800,2000</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget alphatest="on" pixmap="Vali.HD.flex.MOD.wolv007/ico_txt_on.png" position="990,50" render="Pixmap" size="40,24" source="session.CurrentService" zPosition="2">
-      <convert type="ServiceInfo">HasTelext</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget alphatest="on" pixmap="Vali.HD.flex.MOD.wolv007/ico_crypt_on.png" position="555,54" render="Pixmap" size="24,20" source="session.CurrentService" zPosition="2">
-      <convert type="ServiceInfo">IsCrypted</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget backgroundColor="greentransparent" font="Regular;18" foregroundColor="foreground" halign="center" position="881,50" render="FixedLabel" size="36,24" source="session.CurrentService" text="sub" valign="center" zPosition="2">
-      <convert type="ServiceInfo">SubservicesAvailable</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget backgroundColor="redtransparent" font="Regular;18" foregroundColor="foreground" halign="center" position="842,50" render="FixedLabel" size="36,24" source="session.RecordState" text="rec" valign="center" zPosition="3">
-      <convert type="ConditionalShowHide">Blink</convert>
-    </widget>
-    <widget backgroundColor="backgroundNT" font="Regular;19" foregroundColor="foreground" halign="right" valign="center" position="1085,50" render="Label" size="55,24" source="session.CurrentService" transparent="1">
-      <convert type="ServiceInfo">VideoWidth</convert>
-    </widget>
-    <eLabel backgroundColor="backgroundNT" font="Regular;19" halign="center" valign="center" position="1143,50" size="18,24" text="x" transparent="1" />
-    <widget backgroundColor="backgroundNT" font="Regular;19" foregroundColor="foreground" halign="left" valign="center" position="1163,50" render="Label" size="45,24" source="session.CurrentService" transparent="1">
-      <convert type="ServiceInfo">VideoHeight</convert>
-    </widget>
-   <!-- <widget backgroundColor="background" font="Regular;19" foregroundColor="grey" position="1125,117" render="valioSystem" size="110,70" source="session.CurrentService" transparent="1" zPosition="5" noWrap="1" />-->
-  </screen>
+<screen backgroundColor="transparent" flags="wfNoBorder" name="InfoBar" position="center,500" size="1280,280" title="InfoBar">
+  <ePixmap alphatest="off" pixmap="Vali.HD.flex.MOD.wolv007/infobar.png" position="center,0" size="1280,280" zPosition="-1" />
+  <widget alphatest="blend" position="85,107" render="Picon" size="100,60" source="session.CurrentService" transparent="1" zPosition="1">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <widget font="Regular;32" foregroundColor="secondFG" backgroundColor="backgroundNT" halign="left" valign="bottom" render="Wolv007ChNumber" source="session.CurrentService" position="85,37" size="80,50" transparent="1" zPosition="0" />
+  <widget font="Regular;32" foregroundColor="foreground" valign="center" halign="left" position="177,37" render="Label" size="305,55" source="session.CurrentService" transparent="1" zPosition="1" backgroundColor="backgroundNT">
+    <convert type="ServiceName">Name</convert>
+  </widget>
+  <widget font="Regular;32" foregroundColor="foreground" position="1009,25" render="Label" size="100,50" source="global.CurrentTime" transparent="1" valign="center" zPosition="1" halign="center" backgroundColor="backgroundNT">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget font="Regular;18" foregroundColor="foreground" position="937,57" render="Label" size="275,50" source="global.CurrentTime" transparent="1" zPosition="1" halign="center" valign="center" backgroundColor="backgroundNT">
+    <convert type="ClockToText">Format:%A %d. %B %Y</convert>
+  </widget>
+  <widget font="Regular;28" foregroundColor="foreground" position="300,105" render="Label" size="80,30" source="session.Event_Now" transparent="1" zPosition="1" halign="center" backgroundColor="backgroundNT">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget font="Regular;16" foregroundColor="secondFG" halign="right" position="265,140" render="Label" size="70,22" source="session.Event_Now" transparent="1" zPosition="1" backgroundColor="backgroundNT">
+    <convert type="EventTime">Remaining</convert>
+    <convert type="Wolv007ProgressToText">InMinutes</convert>
+  </widget>
+  <eLabel text="/" position="335,140" size="10,22" font="Regular; 16" halign="center" backgroundColor="backgroundNT" foregroundColor="secondFG" transparent="1" />
+  <widget font="Regular;16" foregroundColor="secondFG" position="345,140" render="Label" size="70,22" source="session.Event_Now" transparent="1" zPosition="1" halign="left" backgroundColor="backgroundNT">
+    <convert type="EventTime">Duration</convert>
+    <convert type="ClockToText">InMinutes</convert>
+  </widget>
+  <widget font="Regular;28" foregroundColor="foreground" noWrap="1" position="415,105" halign="left" render="Label" size="700,35" source="session.Event_Now" transparent="1" zPosition="1" backgroundColor="backgroundNT">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget font="Regular;20" position="265,168" render="Label" size="70,30" source="session.Event_Next" transparent="1" zPosition="1" halign="center" backgroundColor="backgroundNT">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <eLabel text="-" position="335,168" size="10,30" font="Regular; 18" halign="center" backgroundColor="backgroundNT" transparent="1" />
+  <widget font="Regular; 20" position="345,168" render="Label" size="70,30" source="session.Event_Next" transparent="1" zPosition="1" halign="center" backgroundColor="backgroundNT">
+    <convert type="EventTime">EndTime</convert>
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget font="Regular; 20" noWrap="1" position="415,168" halign="left" render="Label" size="500,30" source="session.Event_Next" transparent="1" zPosition="1" backgroundColor="backgroundNT">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <eLabel text="(" position="915,168" size="10,30" font="Regular; 18" halign="center" backgroundColor="backgroundNT" transparent="1" />
+  <widget font="Regular; 20" halign="center" position="925,168" render="Label" size="80,30" source="session.Event_Next" transparent="1" zPosition="1" backgroundColor="backgroundNT">
+    <convert type="EventTime">Duration</convert>
+    <convert type="ClockToText">InMinutes</convert>
+  </widget>
+  <eLabel text=")" position="1005,168" size="10,30" font="Regular; 18" halign="center" backgroundColor="backgroundNT" transparent="1" />
+  <widget borderColor="darkgrey" borderWidth="2" pixmap="Vali.HD.flex.MOD.wolv007/p-bar.png" position="416,147" render="Progress" size="500,10" source="session.Event_Now" transparent="0" zPosition="2">
+    <convert type="EventTime">Progress</convert>
+  </widget>
+  <widget alphatest="on" pixmap="Vali.HD.flex.MOD.wolv007/ico_dolby_on.png" position="607,50" render="Pixmap" size="60,24" source="session.CurrentService" zPosition="2">
+    <convert type="ServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap alphatest="on" pixmap="Vali.HD.flex.MOD.wolv007/ico_format_off.png" position="765,50" size="40,21" zPosition="1" />
+  <widget alphatest="on" pixmap="Vali.HD.flex.MOD.wolv007/ico_format_on.png" position="765,50" render="Pixmap" size="40,21" source="session.CurrentService" zPosition="2">
+    <convert type="ServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget alphatest="on" pixmap="Vali.HD.flex.MOD.wolv007/ico_hd_on.png" position="673,50" render="Pixmap" size="40,21" source="session.CurrentService" zPosition="4">
+    <convert type="ServiceInfo">VideoWidth</convert>
+    <convert type="ValueRange">800,2000</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget alphatest="on" pixmap="Vali.HD.flex.MOD.wolv007/ico_txt_on.png" position="719,50" render="Pixmap" size="40,24" source="session.CurrentService" zPosition="2">
+    <convert type="ServiceInfo">HasTelext</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget alphatest="on" pixmap="Vali.HD.flex.MOD.wolv007/ico_crypt_on.png" position="576,50" render="Pixmap" size="24,20" source="session.CurrentService" zPosition="2">
+    <convert type="ServiceInfo">IsCrypted</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget backgroundColor="greentransparent" font="Regular;18" foregroundColor="foreground" halign="center" position="532,50" render="FixedLabel" size="36,24" source="session.CurrentService" text="sub" valign="center" zPosition="2">
+    <convert type="ServiceInfo">SubservicesAvailable</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget backgroundColor="redtransparent" font="Regular;18" foregroundColor="foreground" halign="center" position="489,50" render="FixedLabel" size="36,24" source="session.RecordState" text="rec" valign="center" zPosition="3">
+    <convert type="ConditionalShowHide">Blink</convert>
+  </widget>
+  <widget backgroundColor="backgroundNT" font="Regular;19" foregroundColor="foreground" halign="right" valign="center" position="812,50" render="Label" size="55,24" source="session.CurrentService" transparent="1">
+    <convert type="ServiceInfo">VideoWidth</convert>
+  </widget>
+  <eLabel backgroundColor="backgroundNT" font="Regular;19" halign="center" valign="center" position="869,50" size="18,24" text="x" transparent="1" />
+  <widget backgroundColor="backgroundNT" font="Regular;19" foregroundColor="foreground" halign="left" valign="center" position="889,50" render="Label" size="45,24" source="session.CurrentService" transparent="1">
+    <convert type="ServiceInfo">VideoHeight</convert>
+  </widget>
+  <!-- <widget backgroundColor="background" font="Regular;19" foregroundColor="grey" position="1125,117" render="valioSystem" size="110,70" source="session.CurrentService" transparent="1" zPosition="5" noWrap="1" />-->
+</screen>
   <screen backgroundColor="transparent" flags="wfNoBorder" name="MoviePlayer" position="0,512" size="1280,220" title="InfoBar">
     <ePixmap alphatest="off" pixmap="Vali.HD.flex.MOD.wolv007/osd.png" position="0,0" size="1280,220" zPosition="-1" />
     <ePixmap alphatest="on" pixmap="Vali.HD.flex.MOD.wolv007/dvr.png" position="90,125" size="122,19" transparent="1" zPosition="1" />
