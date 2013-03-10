@@ -642,7 +642,7 @@
   <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_green" position="410,655" size="220,26" transparent="1" zPosition="1" />
   <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_yellow" position="685,655" size="220,26" transparent="1" zPosition="1" />
   <widget backgroundColor="secondBG" font="Regular;22" halign="left" name="key_blue" position="960,655" size="220,26" transparent="1" zPosition="1" />
-  <widget font="Regular; 20" name="epg_description" position="339,358" size="600,280" transparent="0" valign="bottom" backgroundColor="transpBlack" />
+  <widget font="Regular; 20" name="epg_description" position="339,358" size="600,280" transparent="0" valign="top" backgroundColor="transpBlack" />
   <widget alphatest="blend" position="589,292" render="Picon" size="100,60" source="Title" transparent="1" zPosition="1">
     <convert type="valioRefString">CurrentRef</convert>
   </widget>
